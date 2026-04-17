@@ -29,6 +29,13 @@ MODULE user_command_0100 INPUT.
       PERFORM select_data.
       PERFORM make_display_data.
 
+    WHEN 'TOGGLE'.
+      IF gv_dynnr EQ '1100'.
+        gv_dynnr = '0200'.
+      ELSE.
+        gv_dynnr = '1100'.
+      ENDIF.
+
   ENDCASE.
 
 ENDMODULE.
