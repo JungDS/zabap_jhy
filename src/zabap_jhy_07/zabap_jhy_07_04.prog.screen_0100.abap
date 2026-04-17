@@ -1,0 +1,9 @@
+PROCESS BEFORE OUTPUT.  " PBO
+  MODULE status_0100.
+  MODULE init_alv_0100.
+  MODULE clear_ok_code.
+
+PROCESS AFTER INPUT.    " PAI
+
+  MODULE exit_0100 AT EXIT-COMMAND.
+  MODULE user_command_0100.

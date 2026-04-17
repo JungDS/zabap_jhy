@@ -1,0 +1,7 @@
+PROCESS BEFORE OUTPUT.
+  MODULE status_0200.
+  MODULE clear_ok_code.
+
+PROCESS AFTER INPUT.
+  MODULE exit AT EXIT-COMMAND.
+  MODULE user_command_0200.

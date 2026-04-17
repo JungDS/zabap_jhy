@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_NROB" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <ATTRIBUTES>
+    <OBJECT>ZCAFE_NO</OBJECT>
+    <DOMLEN>NUMC2</DOMLEN>
+    <PERCENTAGE>20.0</PERCENTAGE>
+    <NOIVBUFFER>00000010</NOIVBUFFER>
+    <UNAME>NCODE-T-04</UNAME>
+    <UDATE>2026-01-15</UDATE>
+    <UTIME>16:43:54</UTIME>
+   </ATTRIBUTES>
+   <TEXT>
+    <LANGU>E</LANGU>
+    <OBJECT>ZCAFE_NO</OBJECT>
+    <TXT>카페 번호표 발급을 위한 Number Range Object</TXT>
+    <TXTSHORT>카페 번호표</TXTSHORT>
+   </TEXT>
+  </asx:values>
+ </asx:abap>
+</abapGit>

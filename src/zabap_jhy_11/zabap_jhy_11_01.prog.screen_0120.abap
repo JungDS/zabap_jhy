@@ -1,0 +1,11 @@
+PROCESS BEFORE OUTPUT.
+* MODULE STATUS_0120.
+  MODULE modify_screen_0120.
+  MODULE init_obj_0120.
+*
+PROCESS AFTER INPUT.
+* MODULE USER_COMMAND_0120.
+  FIELD ztjhy_shop-pstcd MODULE check_pstcd ON REQUEST.
+
+PROCESS ON VALUE-REQUEST.
+  FIELD ztjhy_shop-pstcd MODULE f4_pstcd.

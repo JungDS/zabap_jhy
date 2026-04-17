@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>자동차 함수 그룹</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZABAP_JHY_05_FG01TOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZABAP_JHY_05_FG01</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>Z_ABAP_JHY_CAR_SPEED_DEC</FUNCNAME>
+     <SHORT_TEXT>자동차 속도 감소</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IV_SPEED</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>I</TYP>
+      </RSIMP>
+     </IMPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IV_SPEED</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>현재 속도에서 감소할 속도</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>Z_ABAP_JHY_CAR_SPEED_GET</FUNCNAME>
+     <SHORT_TEXT>자동차 속도 가져오기</SHORT_TEXT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>EV_SPEED</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>I</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>EV_SPEED</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>현재 자동차의 속도</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>Z_ABAP_JHY_CAR_SPEED_INC</FUNCNAME>
+     <SHORT_TEXT>자동차 속도 증가</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IV_SPEED</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>I</TYP>
+      </RSIMP>
+     </IMPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IV_SPEED</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>현재 속도에서 증가할 속도</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

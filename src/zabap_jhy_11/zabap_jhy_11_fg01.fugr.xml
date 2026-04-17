@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>정규식을 활용한 유효성 점검</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZABAP_JHY_11_FG01TOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZABAP_JHY_11_FG01</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>Z_ABAP_JHY_11_CHECK_PSTCD</FUNCNAME>
+     <SHORT_TEXT>우편번호 점검하는 함수</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IV_POSTAL_CODE</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>CLIKE</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>EV_SUCCESS</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>C</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IV_POSTAL_CODE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>점검하고 싶은 우편번호</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EV_SUCCESS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>성공여부</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>Z_ABAP_JHY_11_CHECK_TELNO</FUNCNAME>
+     <SHORT_TEXT>우편번호 점검하는 함수</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IV_NUMBER</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>CLIKE</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>EV_SUCCESS</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>C</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IV_NUMBER</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>점검하고 싶은 우편번호</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EV_SUCCESS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>성공여부</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

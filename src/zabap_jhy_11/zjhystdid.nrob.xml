@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_NROB" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <ATTRIBUTES>
+    <OBJECT>ZJHYSTDID</OBJECT>
+    <YEARIND>X</YEARIND>
+    <DOMLEN>ZDJHY_STUDENT_ID</DOMLEN>
+    <PERCENTAGE>10.0</PERCENTAGE>
+    <UNAME>NCODE-T-04</UNAME>
+    <UDATE>2026-01-27</UDATE>
+    <UTIME>16:30:53</UTIME>
+   </ATTRIBUTES>
+   <TEXT>
+    <LANGU>E</LANGU>
+    <OBJECT>ZJHYSTDID</OBJECT>
+    <TXT>CODE 대학교 학번</TXT>
+    <TXTSHORT>CODE 대학교 학번</TXTSHORT>
+   </TEXT>
+  </asx:values>
+ </asx:abap>
+</abapGit>
