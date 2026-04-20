@@ -1,7 +1,7 @@
 *&---------------------------------------------------------------------*
 *& Report ZABAP_JHY_99_01
 *&---------------------------------------------------------------------*
-*& [ Codex로 생성된 프로그램 ] 엑셀 업로드/대량데이터 생성 샘플
+*& 엑셀 업로드/대량데이터 생성 샘플
 *&---------------------------------------------------------------------*
 REPORT zabap_jhy_99_01.
 
@@ -27,7 +27,7 @@ PARAMETERS: p_file TYPE rlgrap-filename,
 SELECTION-SCREEN END OF BLOCK b1.
 
 INITIALIZATION.
-  TEXT-t01 = '[ Codex로 생성된 프로그램 ] 업로드 옵션'.
+  TEXT-t01 = '업로드 옵션'.
 
 START-OF-SELECTION.
   IF p_file IS INITIAL.

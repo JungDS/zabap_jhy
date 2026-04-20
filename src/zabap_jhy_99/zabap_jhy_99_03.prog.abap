@@ -1,7 +1,7 @@
 *&---------------------------------------------------------------------*
 *& Report ZABAP_JHY_99_03
 *&---------------------------------------------------------------------*
-*& [ Codex로 생성된 프로그램 ] Column Tree 예제
+*& Column Tree 예제
 *&---------------------------------------------------------------------*
 REPORT zabap_jhy_99_03.
 
@@ -35,7 +35,7 @@ START-OF-SELECTION.
       item_table           = gt_items ).
 
   cl_gui_cfw=>flush( ).
-  WRITE: / '[ Codex로 생성된 프로그램 ] Column Tree가 생성되었습니다.' .
+  WRITE: / 'Column Tree가 생성되었습니다.' .
 
 FORM build_header.
   gs_header-heading = '주제'.

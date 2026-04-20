@@ -1,7 +1,7 @@
 *&---------------------------------------------------------------------*
 *& Report ZABAP_JHY_99_02
 *&---------------------------------------------------------------------*
-*& [ Codex로 생성된 프로그램 ] Simple Tree 예제
+*& Simple Tree 예제
 *&---------------------------------------------------------------------*
 REPORT zabap_jhy_99_02.
 
@@ -23,7 +23,7 @@ START-OF-SELECTION.
       node_table           = gt_nodes ).
 
   cl_gui_cfw=>flush( ).
-  WRITE: / '[ Codex로 생성된 프로그램 ] Simple Tree가 생성되었습니다.' .
+  WRITE: / 'Simple Tree가 생성되었습니다.' .
 
 FORM build_nodes.
   CLEAR gs_node.

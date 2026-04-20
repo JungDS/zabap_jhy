@@ -10,7 +10,7 @@
     <UCCHECK>X</UCCHECK>
    </PROGDIR>
    <TPOOL>
-    <item><ID>R</ID><ENTRY>[ Codex로 생성된 프로그램 ] 엑셀업로드/대량생성</ENTRY><LENGTH>41</LENGTH></item>
+    <item><ID>R</ID><ENTRY>엑셀업로드/대량생성</ENTRY><LENGTH>41</LENGTH></item>
    </TPOOL>
   </asx:values>
  </asx:abap>

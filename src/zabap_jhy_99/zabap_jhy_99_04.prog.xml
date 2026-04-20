@@ -7,7 +7,7 @@
     <SUBC>1</SUBC><RLOAD>E</RLOAD><FIXPT>X</FIXPT><UCCHECK>X</UCCHECK>
    </PROGDIR>
    <TPOOL>
-    <item><ID>R</ID><ENTRY>[ Codex로 생성된 프로그램 ] ALV Tree 예제</ENTRY><LENGTH>35</LENGTH></item>
+    <item><ID>R</ID><ENTRY>ALV Tree 예제</ENTRY><LENGTH>35</LENGTH></item>
    </TPOOL>
   </asx:values>
  </asx:abap>
