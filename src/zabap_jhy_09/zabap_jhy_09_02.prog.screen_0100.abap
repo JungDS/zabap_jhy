@@ -10,13 +10,8 @@ PROCESS BEFORE OUTPUT.
 * - 툴바 버튼, 메뉴 상태 정의
 * - SET PF-STATUS / SET TITLEBAR 등이 보통 여기서 수행됨
 
-  MODULE init_alv_0100.
-* ALV 및 컨테이너 초기화
-* - Custom Container 생성
-* - ALV Grid 생성 및 데이터 바인딩
-* - 일반적으로 IF go_container IS INITIAL 조건으로 1회만 생성
+  CALL SUBSCREEN suba INCLUDING sy-repid gv_dynnr.
 
-  CALL SUBSCREEN suba INCLUDING sy-repid '1100'.
 
   MODULE clear_ok_code.
 * OK_CODE 초기화
