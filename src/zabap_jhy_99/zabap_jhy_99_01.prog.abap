@@ -30,6 +30,15 @@ INITIALIZATION.
   TEXT-t01 = '업로드 옵션'.
 
 START-OF-SELECTION.
+  CLEAR gt_upload.
+
+  " [수정 이유]
+  " - p_rows가 0 이하일 때 DO 루프가 의미가 없고 사용자 혼동이 발생할 수 있어 선검증을 추가함.
+  IF p_file IS INITIAL AND p_rows <= 0.
+    MESSAGE '생성 건수(p_rows)는 1 이상이어야 합니다.' TYPE 'S' DISPLAY LIKE 'E'.
+    RETURN.
+  ENDIF.
+
   IF p_file IS INITIAL.
     PERFORM generate_dummy_data.
   ELSE.
@@ -48,6 +57,7 @@ FORM generate_dummy_data.
 
   DO p_rows TIMES.
     lv_idx = sy-index.
+    CLEAR gs_upload.
     gs_upload-row_id = lv_idx.
     gs_upload-student_name = |학생_{ lv_idx }|.
     gs_upload-department = |D{ ( lv_idx MOD 10 ) }|.
@@ -79,6 +89,10 @@ FORM upload_from_excel.
     RETURN.
   ENDIF.
 
+  " [수정 이유]
+  " - AT NEW/AT END OF는 정렬 상태에 의존하므로, 행/열 기준 정렬을 보장해 파싱 오류를 예방함.
+  SORT gt_excel BY row col.
+
   LOOP AT gt_excel INTO gs_excel.
     AT NEW row.
       CLEAR gs_upload.
@@ -97,6 +111,8 @@ FORM upload_from_excel.
     ENDAT.
   ENDLOOP.
 
+  " [수정 이유]
+  " - 업로드 파일에 ROW_ID가 비어있으면 DB Key 충돌/중복 가능성이 있어 순번 보정 로직 유지.
   LOOP AT gt_upload ASSIGNING <ls_upload>.
     IF <ls_upload>-row_id IS INITIAL.
       <ls_upload>-row_id = sy-tabix.
@@ -108,9 +124,10 @@ FORM save_data.
   DATA: lt_db TYPE STANDARD TABLE OF ztjhy_99_bulk,
         ls_db TYPE ztjhy_99_bulk.
 
-  IF p_del = abap_true.
+  " [수정 이유]
+  " - 체크박스는 CHAR1이므로 'X' 비교가 가장 안전함.
+  IF p_del = 'X'.
     DELETE FROM ztjhy_99_bulk.
-    COMMIT WORK.
   ENDIF.
 
   LOOP AT gt_upload INTO gs_upload.

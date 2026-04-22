@@ -10,10 +10,20 @@ DATA: go_tree  TYPE REF TO cl_gui_simple_tree,
       gs_node  TYPE treev_node.
 
 START-OF-SELECTION.
+  " [오류 분석/수정]
+  " - 기존 코드는 컨트롤 생성 실패 시 원인을 알기 어려웠음.
+  " - 예외 처리 + 메시지를 추가해 학습 시 디버깅 포인트를 명확히 함.
   CREATE OBJECT go_tree
     EXPORTING
       parent              = cl_gui_container=>default_screen
-      node_selection_mode = cl_gui_simple_tree=>node_sel_mode_single.
+      node_selection_mode = cl_gui_simple_tree=>node_sel_mode_single
+    EXCEPTIONS
+      OTHERS              = 1.
+
+  IF sy-subrc <> 0.
+    MESSAGE 'Simple Tree 컨트롤 생성 실패' TYPE 'S' DISPLAY LIKE 'E'.
+    RETURN.
+  ENDIF.
 
   PERFORM build_nodes.
 
@@ -22,6 +32,8 @@ START-OF-SELECTION.
       table_structure_name = 'TREEV_NODE'
       node_table           = gt_nodes ).
 
+  " [수정 이유]
+  " - Control Framework 오류는 flush 시점에 발생하는 경우가 많아 명시적으로 호출.
   cl_gui_cfw=>flush( ).
   WRITE: / 'Simple Tree가 생성되었습니다.' .
 
