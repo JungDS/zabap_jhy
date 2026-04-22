@@ -6,6 +6,8 @@
 *&---------------------------------------------------------------------*
 FORM init_data .
 
+  gv_dynnr = '1100'.
+
 ENDFORM.
 *&---------------------------------------------------------------------*
 *& Form modify_screen_1000
@@ -65,18 +67,18 @@ FORM display_data .
 
 ENDFORM.
 *&---------------------------------------------------------------------*
-*& Form create_object_0100
+*& Form create_object_0300
 *&---------------------------------------------------------------------*
-FORM create_object_0100 .
+FORM create_object_0300 .
 
   go_container = NEW #( 'CCON_0100' ).
   go_alv_grid  = NEW #( go_container ).
 
 ENDFORM.
 *&---------------------------------------------------------------------*
-*& Form set_alv_layout_0100
+*& Form SET_ALV_LAYOUT_0300
 *&---------------------------------------------------------------------*
-FORM set_alv_layout_0100 .
+FORM SET_ALV_LAYOUT_0300 .
 
   gs_layout = VALUE #(
 
@@ -88,9 +90,9 @@ FORM set_alv_layout_0100 .
 
 ENDFORM.
 *&---------------------------------------------------------------------*
-*& Form set_alv_fieldcat_0100
+*& Form set_alv_fieldcat_0300
 *&---------------------------------------------------------------------*
-FORM set_alv_fieldcat_0100 .
+FORM set_alv_fieldcat_0300 .
 
   REFRESH gt_fieldcat.
 
@@ -103,9 +105,9 @@ FORM set_alv_fieldcat_0100 .
 
 ENDFORM.
 *&---------------------------------------------------------------------*
-*& Form display_alv_grid_0100
+*& Form display_alv_grid_0300
 *&---------------------------------------------------------------------*
-FORM display_alv_grid_0100 .
+FORM display_alv_grid_0300 .
 
   gs_variant = VALUE #(
     report = sy-repid
@@ -135,9 +137,9 @@ FORM display_alv_grid_0100 .
 
 ENDFORM.
 *&---------------------------------------------------------------------*
-*& Form refresh_grid_0100
+*& Form refresh_grid_0300
 *&---------------------------------------------------------------------*
-FORM refresh_grid_0100.
+FORM refresh_grid_0300.
 
   CHECK go_alv_grid IS BOUND.
 
@@ -150,9 +152,9 @@ FORM refresh_grid_0100.
 
 ENDFORM.
 *&---------------------------------------------------------------------*
-*& Form set_alv_sort_0100
+*& Form set_alv_sort_0300
 *&---------------------------------------------------------------------*
-FORM set_alv_sort_0100 .
+FORM set_alv_sort_0300 .
 
   REFRESH gt_sort.
 
