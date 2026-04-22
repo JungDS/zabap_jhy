@@ -4,10 +4,17 @@
   <asx:values>
    <PROGDIR>
     <NAME>ZABAP_JHY_99_05</NAME>
-    <SUBC>1</SUBC><RLOAD>E</RLOAD><FIXPT>X</FIXPT><UCCHECK>X</UCCHECK>
+    <SUBC>1</SUBC>
+    <RLOAD>E</RLOAD>
+    <FIXPT>X</FIXPT>
+    <UCCHECK>X</UCCHECK>
    </PROGDIR>
    <TPOOL>
-    <item><ID>R</ID><ENTRY>구구단 출력 프로그램</ENTRY><LENGTH>30</LENGTH></item>
+    <item>
+     <ID>R</ID>
+     <ENTRY>구구단 출력 프로그램</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
    </TPOOL>
   </asx:values>
  </asx:abap>
